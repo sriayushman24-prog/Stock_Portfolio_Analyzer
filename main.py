@@ -7,7 +7,7 @@ df = pd.read_csv(file_path)
 # Ensure the Date column is parsed as datetime
 df["Date"] = pd.to_datetime(df["Date"])
 
-# Display available tickers for the user
+# Display the available tickers for the user
 available_tickers = df["Ticker"].unique()
 print("Available Stocks:", ", ".join(available_tickers))
 
