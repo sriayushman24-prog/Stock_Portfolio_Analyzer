@@ -39,3 +39,31 @@ else:
 
         starting_price = stock_data["Close"].iloc[0]
         ending_price = stock_data["Close"].iloc[-1]
+        total_return = ((ending_price - starting_price) / starting_price) * 100
+
+        # Calculate daily returns if not already present or compute fresh
+        stock_data["Return"] = stock_data["Close"].pct_change() * 100
+
+        avg_daily_return = stock_data["Return"].mean()
+        best_day = stock_data["Return"].max()
+
+        worst_day = stock_data["Return"].min()
+
+        # Print the formatted report
+        print("\n" + "=" * 40)
+        print("       STOCK MARKET ANALYZER")
+        print("=" * 40)
+        print(f"\nStock: {stock_input}")
+        print(
+            f"Period: {start_date_str} → { end_date_str}"
+        )
+        print("-" * 40)
+        print(f"{stock_input} ANALYSIS")
+        print("-" * 40)
+        print(f"Starting Price:        ${starting_price:.2f}")
+        print(f"Ending Price:          ${ending_price:.2f}")
+        print(f"\nTotal Return:          {total_return:+.2f}%")
+        print(f"Average Daily Return:   {avg_daily_return:+.2f}%")
+        print(f"Best Day:              {best_day:+.2f}%")
+        print(f"Worst Day:             {worst_day:+.2f}%")
+        print("=" * 40)
