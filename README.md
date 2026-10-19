@@ -55,7 +55,7 @@ pip install pandas matplotlib
 Run the following commands in your terminal:
 
 ```bash
-git clone https://github.com/sriayushman24/Stock_Portfolio_Analyzer.git
+git clone https://github.com/sriayushman24-prog/Stock_Portfolio_Analyzer.git
 cd Stock_Portfolio_Analyzer
 ```
 ### 3. Add the Dataset
@@ -111,4 +111,4 @@ Building the project in two levels helped me start with simpler calculations bef
 
 **Ayushman Sri Murugathas**
 
-GitHub: https://github.com/sriayushman24
+GitHub: https://github.com/sriayushman24-prog
